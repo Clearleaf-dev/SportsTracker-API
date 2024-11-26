@@ -1,13 +1,11 @@
-FROM node:current-alpine3.19
+FROM node:lts-alpine
 
 WORKDIR /app
 
-COPY . /app/
+COPY . .
 
 RUN npm install
 
 EXPOSE 3010
-
-ENV NAME SportsTracker-API
 
 CMD [ "npm", "start" ]
